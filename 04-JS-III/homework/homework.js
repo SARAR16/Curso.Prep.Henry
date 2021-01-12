@@ -3,37 +3,59 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un array
   // Tu código:
+  return array[0];
 }
+
+devolverPrimerElemento(['piña', 'manzana', 'pera']);
+
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+  return array[array.length -1];
 }
+devolverUltimoElemento(['pez', 'caracol', 'ostra']);
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+  return array.length;
 }
+obtenerLargoDelArray ([1, 2, 3, 4, 5, 6]);
 
 function incrementarPorUno(array) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  var arreglo = [];
+  for(var num=0; num < array.length; num++){
+    arreglo[num] = array [num] + 1;
+  }
+  return arreglo;
 }
+incrementarPorUno([10]);
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+array.push(elemento);
+return array;
+
 }
+agregarItemAlFinalDelArray (['patricia']);
 
 function agregarItemAlComienzoDelArray(array, elemento) {
   // Añade el "elemento" al comienzo del array
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift(elemento);
+  return array;
 }
+
+agregarItemAlComienzoDelArray (['dos']);
 
 function dePalabrasAFrase(palabras) {
   // "palabras" es un array de strings/cadenas
@@ -41,18 +63,30 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  return palabras.join(' ');
 }
+dePalabrasAFrase(['soy', 'una', 'frase']);
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+
+for (var num=0; num < array.length; num++){
+  if (elemento === array[num]){
+  return true;
+  }
 }
+return false;
+}
+
+arrayContiene([3], 3)
 
 function agregarNumeros(numeros) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+
 }
 
 function promedioResultadosTest(resultadosTest) {
